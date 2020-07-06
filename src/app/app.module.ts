@@ -8,11 +8,13 @@ import { AppComponent } from './app.component';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {PasswordModule, InputTextModule, PanelModule} from 'primeng/primeng';
 import { ButtonModule } from 'primeng/button';
+import { LoginComponent } from './login/login.component';
 
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule, 
