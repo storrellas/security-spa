@@ -7,6 +7,8 @@ import { AppComponent } from './app.component';
 //import { HelloComponent } from './hello.component';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {PasswordModule, InputTextModule, PanelModule} from 'primeng/primeng';
+import { ButtonModule } from 'primeng/button';
+
 
 @NgModule({
   declarations: [
@@ -19,7 +21,8 @@ import {PasswordModule, InputTextModule, PanelModule} from 'primeng/primeng';
     FormsModule,
     PasswordModule,
     InputTextModule,
-    PanelModule
+    PanelModule,
+    ButtonModule
   ],
   providers: [],
   bootstrap: [AppComponent]
