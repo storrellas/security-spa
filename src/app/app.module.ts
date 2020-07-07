@@ -11,6 +11,8 @@ import { ButtonModule } from 'primeng/button';
 import { SidebarModule } from 'primeng/sidebar';
 import {BreadcrumbModule} from 'primeng/breadcrumb';
 import {MenuModule} from 'primeng/menu';
+import {DialogModule} from 'primeng/dialog';
+
 
 // Project imports
 import { LoginComponent } from './login/login.component';
@@ -30,6 +32,8 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
     AppRoutingModule,    
     BrowserAnimationsModule,
     FormsModule,
+
+    // PrimeNg
     PasswordModule,
     InputTextModule,
     PanelModule,
@@ -38,9 +42,10 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
     MenuModule,
     BreadcrumbModule,
+    DialogModule,
 
+    // Others
     NgbModule,
-
     FontAwesomeModule,
   ],
   providers: [],

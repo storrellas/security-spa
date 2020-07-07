@@ -21,6 +21,7 @@ export class DashboardComponent implements OnInit {
   faSearch = faSearch;
   faTrashAlt = faTrashAlt;
   faShieldAlt = faShieldAlt;
+
   display : Boolean = false;
 
   items: MenuItem[];
@@ -69,6 +70,10 @@ export class DashboardComponent implements OnInit {
     } else {
       return `with: ${reason}`;
     }
+  }
+
+  showDialog() {
+    this.display = true;
   }
 
 }
