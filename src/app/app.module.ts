@@ -9,7 +9,7 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { PasswordModule, InputTextModule, PanelModule } from 'primeng/primeng';
 import { ButtonModule } from 'primeng/button';
 import { SidebarModule } from 'primeng/sidebar';
-
+import {BreadcrumbModule} from 'primeng/breadcrumb';
 import {MenuModule} from 'primeng/menu';
 
 // Project imports
@@ -37,6 +37,7 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
     SidebarModule,
 
     MenuModule,
+    BreadcrumbModule,
 
     NgbModule,
 

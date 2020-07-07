@@ -56,8 +56,7 @@
         <div class="input-group">
           <input type="text" class="form-control bg-light border-0 small" placeholder="Search for..." aria-label="Search" aria-describedby="basic-addon2">
           <div class="input-group-append">
-            <button class="btn btn-primary" type="button">
-              
+            <button class="btn btn-primary" type="button">              
               <fa-icon [icon]="faSearch"></fa-icon>
             </button>
           </div>
@@ -68,6 +67,11 @@
     </nav>
 
     <div class="content p-3 w-100">
+      <!-- Breadcrumb -->
+      <div class="mt-3 mb-3">
+        <p-breadcrumb [model]="items"></p-breadcrumb>
+      </div>
+
       <div>
         <h3>Employees</h3>
         <div class="mt-3 p-3" style="background-color: #ffffff; border: 1px solid #e3e6f0; color: #858796">
@@ -75,19 +79,30 @@
             <thead>
             <tr>
               <th scope="col">Name</th>
-              <th scope="col">Role</th>
-              <th scope="col">Position</th>
+              <th scope="col">Email</th>
+              <th scope="col">Phone</th>
+              <th scope="col">Last Entry</th>
               <th scope="col">Operations</th>
             </tr>
             </thead>
             <tbody>
               <tr *ngFor="let employee of employeeList">
                 <td>{{employee.name}}</td>
-                <td>{{employee.role}}</td>
-                <td>{{employee.position}}</td>
-                <td>
-                  <fa-icon [icon]="faPencilRuler"></fa-icon>
-                  <fa-icon [icon]="faTrashAlt"></fa-icon>
+                <td>{{employee.email}}</td>
+                <td>{{employee.phone}}</td>
+                <td>{{employee.lastEntry}}</td>
+                <td class="text-center">
+
+                  <button type="button" class="btn btn-primary" (click)="open(content)">
+                    <fa-icon [icon]="faPencilRuler"></fa-icon>
+                  </button>
+
+
+                  <span class="ml-3 text-center">
+                    <button type="button" class="btn btn-primary">
+                      <fa-icon [icon]="faTrashAlt"></fa-icon>
+                    </button>
+                  </span>
                 </td>
               </tr>
             </tbody>
@@ -106,6 +121,32 @@
 
   </div>
 
+
+
+  <ng-template #content let-modal>
+      <div class="modal-header">
+        <h4 class="modal-title" id="modal-basic-title">Profile update</h4>
+        <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form>
+          <div class="form-group">
+            <label for="dateOfBirth">Date of birth</label>
+            <div class="input-group">
+              <input id="dateOfBirth" class="form-control" placeholder="yyyy-mm-dd" name="dp" ngbDatepicker #dp="ngbDatepicker">
+              <div class="input-group-append">
+                <button class="btn btn-outline-secondary calendar" (click)="dp.toggle()" type="button"></button>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-outline-dark" (click)="modal.close('Save click')">Save</button>
+      </div>
+    </ng-template>
 
 
 </div>
