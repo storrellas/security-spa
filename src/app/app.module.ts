@@ -4,17 +4,26 @@ import { FormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-//import { HelloComponent } from './hello.component';
+
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
-import {PasswordModule, InputTextModule, PanelModule} from 'primeng/primeng';
+import { PasswordModule, InputTextModule, PanelModule } from 'primeng/primeng';
 import { ButtonModule } from 'primeng/button';
+import { SidebarModule } from 'primeng/sidebar';
+
+import {MenuModule} from 'primeng/menu';
+
+// Project imports
 import { LoginComponent } from './login/login.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    LoginComponent
+    LoginComponent,
+    DashboardComponent
   ],
   imports: [
     BrowserModule, 
@@ -24,7 +33,14 @@ import { LoginComponent } from './login/login.component';
     PasswordModule,
     InputTextModule,
     PanelModule,
-    ButtonModule
+    ButtonModule,
+    SidebarModule,
+
+    MenuModule,
+
+    NgbModule,
+
+    FontAwesomeModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
